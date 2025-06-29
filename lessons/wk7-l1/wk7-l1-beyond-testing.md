@@ -1,5 +1,7 @@
 ![AAIDC-wk7-l1-agentic-eval-intro.jpeg](AAIDC-wk7-l1-agentic-eval-intro.jpeg)
 
+--DIVIDER--
+
 ---
 
 --DIVIDER--
@@ -12,7 +14,7 @@ Building agentic systems is exciting — but testing them the traditional way is
 
 --DIVIDER--
 
-# 🎭 The Demo Trap
+# The Demo Trap
 
 Have you come across some cool demos of agentic systems?
 
@@ -90,7 +92,7 @@ How do we test traditional systems? What do we _expect_ from a system when we sa
 
 --DIVIDER--
 
-# What We Want to Measure — and What We Actually Can
+# What We Evaluate in Agentic Systems
 
 Let’s make this real.
 
@@ -116,11 +118,13 @@ Or do you step back and ask:
 
 --DIVIDER--
 
-# What We Evaluate in Agentic Systems
-
 Whether you’re building a chatbot, a multi-agent planner, or a tool-using autonomous assistant, the core evaluation goals fall into four major categories:
 
+--DIVIDER--
+
 ![agentic-systems-testing-and-evaluation.png](agentic-systems-testing-and-evaluation.png)
+
+--DIVIDER--
 
 1.  **Task Performance Evaluation** – Did it accomplish the task, and do it well?
 2.  **System Performance Evaluation** – Does it run efficiently and reliably?
@@ -133,7 +137,7 @@ Let’s walk through each of these and see what’s possible — and what’s st
 
 --DIVIDER--
 
-## Task Performance Evaluation – Did it accomplish the task, and do it well?
+## 🎯 Task Performance Evaluation – Did it accomplish the task, and do it well?
 
 When we talk about task performance evaluation, the first instinct is to check for **task success**.
 
@@ -274,11 +278,14 @@ So even in early stages, it’s worth asking:
  > Evaluation expands what we measure — it doesn’t replace testing.
  > Most real-world systems will use **both**, depending on the component and context.
  
-:::
+ :::
+ 
+ ---
+
 
 --DIVIDER--
 
-## 🧭 Wrapping Up: What Actually Matters
+# Wrapping Up: What Actually Matters
 
 Building agentic systems is exciting — but evaluating them is where things get real.
 
@@ -294,11 +301,9 @@ You’ve now seen four key dimensions:
 - **Security & Robustness** — Can it handle unexpected or hostile input?
 - **Ethics & Alignment** — Does it behave responsibly and reflect your values?
 
-Each of these matters. But we’ll start where it matters most: **task performance**.
+This week, we’ll focus on the first one: task performance — techniques, tools, and examples for evaluating whether your agent is doing the job it was built to do.
 
-Because before you worry about cost or safety, you need to know the system actually works.
-
-That’s where we’ll focus next — techniques, tools, and examples for evaluating whether your agent is doing the job it was built to do.
+We’ll return to the others in Module 3.
 
 See you in the next lesson!
 
