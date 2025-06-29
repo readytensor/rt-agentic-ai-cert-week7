@@ -1,3 +1,5 @@
+![AAIDC-wk7-l1-agentic-eval-intro.jpeg](AAIDC-wk7-l1-agentic-eval-intro.jpeg)
+
 ---
 
 --DIVIDER--
@@ -116,7 +118,9 @@ Or do you step back and ask:
 
 # What We Evaluate in Agentic Systems
 
-Whether you’re building a chatbot, a multi-agent planner, or a tool-using autonomous assistant, the core evaluation goals fall into a few major categories:
+Whether you’re building a chatbot, a multi-agent planner, or a tool-using autonomous assistant, the core evaluation goals fall into four major categories:
+
+![agentic-systems-testing-and-evaluation.png](agentic-systems-testing-and-evaluation.png)
 
 1.  **Task Performance Evaluation** – Did it accomplish the task, and do it well?
 2.  **System Performance Evaluation** – Does it run efficiently and reliably?
