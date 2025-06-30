@@ -61,7 +61,7 @@ How do we test traditional systems? What do we _expect_ from a system when we sa
  
  Even in reinforcement learning, where models act over time, you have clear reward functions. Evaluation is still numeric, structured, and well-defined.
  
- <h3>But what about agentic systems ❓ </h3>
+<h3>But, ... in agentic systems ❓ </h3>
  
  Agentic AI systems don’t return fixed labels or structured outputs. They _generate responses_, _make decisions_, _route tasks_, _use tools_, and sometimes even talk to other agents.
  
@@ -281,7 +281,6 @@ So even in early stages, it’s worth asking:
  :::
  
  ---
-
 
 --DIVIDER--
 
