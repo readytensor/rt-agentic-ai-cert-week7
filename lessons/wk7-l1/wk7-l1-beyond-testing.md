@@ -4,6 +4,13 @@
 
 ---
 
+[🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
+
+[⬅️ Previous - Week 7 Preview](https://app.readytensor.ai/publications/LZYqZkLL09bo)
+[➡️ Next - Evaluation Methods](https://app.readytensor.ai/publications/ljPGqR17HJmj)
+
+---
+
 --DIVIDER--
 
 # TL;DR
@@ -61,7 +68,7 @@ How do we test traditional systems? What do we _expect_ from a system when we sa
  
  Even in reinforcement learning, where models act over time, you have clear reward functions. Evaluation is still numeric, structured, and well-defined.
  
-<h3>But, ... in agentic systems ❓ </h3>
+ <h3>But, ... in agentic systems ❓ </h3>
  
  Agentic AI systems don’t return fixed labels or structured outputs. They _generate responses_, _make decisions_, _route tasks_, _use tools_, and sometimes even talk to other agents.
  
@@ -307,3 +314,12 @@ We’ll return to the others in Module 3.
 See you in the next lesson!
 
 --DIVIDER--
+
+---
+
+[🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
+
+[⬅️ Previous - Week 7 Preview](https://app.readytensor.ai/publications/LZYqZkLL09bo)
+[➡️ Next - Evaluation Methods](https://app.readytensor.ai/publications/ljPGqR17HJmj)
+
+---

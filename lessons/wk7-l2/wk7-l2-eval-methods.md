@@ -4,6 +4,15 @@
 
 ---
 
+[🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
+
+[⬅️ Previous - Agentic Evaluation Intro](https://app.readytensor.ai/publications/FO7hdfmkhl42)
+[➡️ Next - Choosing Eval Metrics](https://app.readytensor.ai/publications/68dY0FXJ1gI1)
+
+---
+
+--DIVIDER--
+
 # TL;DR
 
 Evaluating agentic AI isn’t one-size-fits-all. In this lesson, you’ll explore seven practical methods for testing systems that think, act, and adapt: from using LLMs as judges to code-based checks, human review, red teaming, and more. Each method has strengths and tradeoffs — and works best when matched to a specific evaluation goal, like task performance, safety, or robustness. By the end, you’ll have a clear mental model of your evaluation toolkit — and know when to reach for which tool.
@@ -261,7 +270,7 @@ Still, if you’re serious about robustness, alignment, and real-world readiness
 
 --DIVIDER--
 
-# 🗺️ Matching Methods to Evaluation Goals
+# Matching Methods to Evaluation Goals
 
 Each evaluation method supports a different slice of the evaluation landscape — and no single one does it all.
 
@@ -274,7 +283,6 @@ Use this matrix to see which methods align with which goals, so you can choose t
  <p align="center"><em>Figure: Mapping Evaluation Methods to Key Evaluation Goals</em></p>
  
  ---
-
 
 --DIVIDER--
 
@@ -303,5 +311,16 @@ You’ll explore practical tools like RAGAS and DeepEval, learn how to design us
 > **Did the agentic system actually accomplish the task — and do it well?**
 
 Let’s get started.
+
+---
+
+--DIVIDER--
+
+---
+
+[🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
+
+[⬅️ Previous - Agentic Evaluation Intro](https://app.readytensor.ai/publications/FO7hdfmkhl42)
+[➡️ Next - Choosing Eval Metrics](https://app.readytensor.ai/publications/68dY0FXJ1gI1)
 
 ---
