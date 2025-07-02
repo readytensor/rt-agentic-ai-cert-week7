@@ -7,6 +7,7 @@
 [🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
 
 [⬅️ Previous - Evaluation Methods](https://app.readytensor.ai/publications/ljPGqR17HJmj)
+[➡️ Next - RAGAS Tutorial](https://app.readytensor.ai/publications/Frw6T1fBzVTF)
 
 ---
 
@@ -402,5 +403,6 @@ Up next, we’ll explore how to **build evaluation into your development loop** 
 [🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
 
 [⬅️ Previous - Evaluation Methods](https://app.readytensor.ai/publications/ljPGqR17HJmj)
+[➡️ Next - RAGAS Tutorial](https://app.readytensor.ai/publications/Frw6T1fBzVTF)
 
 ---
