@@ -231,7 +231,7 @@ For systems without grounding — like creative writing, domain experts, or brai
 
 --DIVIDER--
 
-![goal-complexity.jpeg](goal-complexity.jpeg)
+![goal-complexity-v2.png](goal-complexity-v2.png)
 
 --DIVIDER--
 
