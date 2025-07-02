@@ -66,6 +66,26 @@ Next, we’ll set it up and walk through how to use it step by step.
 
 --DIVIDER--
 
+:::info{title="RAGAS Strength: Aligned LLM-as-a-Judge Evaluation"}
+
+RAGAS is built around the **LLM-as-a-Judge** paradigm — using models like GPT-4 to evaluate outputs based on structured prompts.
+
+But unlike earlier methods that apply static prompts, RAGAS lets you **align evaluation behavior with human judgment**. You can:
+
+1. Run evaluations using pre-defined metrics
+2. Review results and provide feedback (accept/reject/edit)
+3. Retrain the scoring logic to better match your standards
+
+Under the hood, RAGAS uses **prompt optimization and evolutionary search** to refine how the LLM evaluates — all without needing to fine-tune the model. The result is an evaluator that better mirrors how _you_ (or your team) think about quality.
+
+> This is what makes RAGAS stand out: it doesn’t just automate evaluation — it helps you build evaluators that improve with use. Read more in the [RAGAS blog post](https://www.ragas.io/blog/aligning-llm-as-judge-with-human-evaluators).
+
+:::
+
+---
+
+--DIVIDER--
+
 # RAGAS in Action
 
 --DIVIDER--
@@ -140,7 +160,6 @@ Let’s walk through the process.
  generator_embeddings = LangchainEmbeddingsWrapper(OpenAIEmbeddings())
  ```
 
-
 --DIVIDER--
 
  <h3> Step 3: Generate the Test Set </h3>
@@ -174,8 +193,6 @@ Let’s walk through the process.
  | `reference`          | The reference answer                      |
  | `reference_contexts` | The relevant context chunks from the docs |
  | `synthesizer_name`   | Which LLM created the synthetic data      |
- 
-
 
 --DIVIDER--
 
@@ -477,6 +494,7 @@ For more information, deep dives, and the latest updates on RAGAS, explore the o
 - 🚀 **Getting Started Guide**: [Run Your First Eval](https://docs.ragas.io/en/stable/getstarted/evals/)
 - 🧪 **Natural Language Comparison Metrics**: [Metric Details](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/#natural-language-comparison)
 - 🛠 **GitHub Repository**: [explodinggradients/ragas](https://github.com/explodinggradients/ragas)
+- 🧠 **RAGAS Blog – Aligning LLM-as-a-Judge with Human Evaluation**: [https://www.ragas.io/blog/aligning-llm-as-judge-with-human-evaluators](https://www.ragas.io/blog/aligning-llm-as-judge-with-human-evaluators)
 
 ---
 
