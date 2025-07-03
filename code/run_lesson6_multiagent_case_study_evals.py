@@ -8,10 +8,10 @@ from langchain_openai import OpenAIEmbeddings
 from ragas.llms import LangchainLLMWrapper
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-
+from llm import get_llm
 
 # Import utility functions
-from code.utils import (
+from utils import (
     truncate_context,
     load_dataset,
     load_publication_descriptions,
@@ -20,7 +20,13 @@ from code.utils import (
     print_evaluation_summary,
     initialize_result_dict,
     prepare_text_for_semantic_similarity,
+    load_config,
 )
+
+config = load_config()
+
+llm = get_llm(config.get("llm", "gpt-4o-mini"))
+num_publications_to_evaluate = config.get("num_publications_to_evaluate", 2)
 
 
 def jaccard_score(list1, list2):
@@ -72,7 +78,7 @@ async def evaluate_semantic_similarity(generated_text, truth_text, metric_name):
 async def evaluate_faithfulness(generated_text, context, user_input, metric_name):
     """Evaluate faithfulness of generated text against the context."""
     # Create faithfulness scorer
-    evaluator_llm = LangchainLLMWrapper(ChatOpenAI(model="gpt-4o-mini", temperature=0))
+    evaluator_llm = LangchainLLMWrapper(llm)
     faithfulness_scorer = Faithfulness(llm=evaluator_llm)
 
     if isinstance(generated_text, list):
@@ -115,11 +121,11 @@ async def evaluate_jaccard_similarity(generated_text, truth_text, metric_name):
     }
 
 
-async def evaluate_dataset():
+async def evaluate_dataset(num_publications_to_evaluate: int = 2):
     """Evaluate the golden dataset with semantic similarity, Jaccard metrics, and faithfulness."""
 
     # Load data using utility functions
-    df = load_dataset()
+    df = load_dataset(num_publications_to_evaluate=num_publications_to_evaluate)
     pub_descriptions = load_publication_descriptions()
 
     # Results storage
