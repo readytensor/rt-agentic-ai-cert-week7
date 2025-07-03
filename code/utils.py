@@ -1,6 +1,10 @@
-import pandas as pd
+import os
 import json
+import yaml
+import pandas as pd
 from paths import (
+    DATA_DIR,
+    CONFIG_FILE_PATH,
     GOLDEN_DATASET_CSV,
     GOLDEN_DATASET_JSON,
     EVALUATION_RESULTS_CSV,
@@ -36,7 +40,7 @@ def truncate_context(text, max_tokens=8000):
         return truncated + "..."
 
 
-def load_dataset(csv_path=GOLDEN_DATASET_CSV):
+def load_dataset(csv_path=GOLDEN_DATASET_CSV, num_publications_to_evaluate: int = 2):
     """
     Load the main evaluation dataset.
 
@@ -47,7 +51,7 @@ def load_dataset(csv_path=GOLDEN_DATASET_CSV):
         pandas.DataFrame: Loaded dataset
     """
 
-    return pd.read_csv(csv_path, nrows=10)
+    return pd.read_csv(csv_path, nrows=num_publications_to_evaluate)
 
 
 def load_publication_descriptions(json_path=GOLDEN_DATASET_JSON):
@@ -237,3 +241,24 @@ def prepare_text_for_semantic_similarity(text, field_type=None):
     if field_type == "tags":
         text = text.replace("|", ", ")
     return text
+
+
+def load_config(config_path: str = CONFIG_FILE_PATH):
+    with open(config_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def load_publication_example(example_number: int) -> str:
+    """
+    Load a publication example text file.
+
+    Args:
+        example_number: The number of the example to load (1, 2, or 3)
+
+    Returns:
+        The content of the publication example file
+    """
+    example_fpath = f"publication_example{example_number}.md"
+    full_path = os.path.join(DATA_DIR, example_fpath)
+    with open(full_path, "r", encoding="utf-8") as f:
+        return f.read()

@@ -7,6 +7,7 @@
 [🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
 
 [⬅️ Previous - Evaluation Methods](https://app.readytensor.ai/publications/ljPGqR17HJmj)
+[➡️ Next - RAGAS Tutorial](https://app.readytensor.ai/publications/Frw6T1fBzVTF)
 
 ---
 
@@ -230,7 +231,7 @@ For systems without grounding — like creative writing, domain experts, or brai
 
 --DIVIDER--
 
-![goal-complexity.jpeg](goal-complexity.jpeg)
+![goal-complexity-v2.png](goal-complexity-v2.png)
 
 --DIVIDER--
 
@@ -402,5 +403,6 @@ Up next, we’ll explore how to **build evaluation into your development loop** 
 [🏠 Home - All Lessons](https://app.readytensor.ai/hubs/ready_tensor_certifications)
 
 [⬅️ Previous - Evaluation Methods](https://app.readytensor.ai/publications/ljPGqR17HJmj)
+[➡️ Next - RAGAS Tutorial](https://app.readytensor.ai/publications/Frw6T1fBzVTF)
 
 ---
