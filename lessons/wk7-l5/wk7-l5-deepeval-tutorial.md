@@ -1,4 +1,4 @@
-![AAIDC-wk7-l5-deepeval-tutorial.jpeg](AAIDC-wk7-l5-deepeval-tutorial.jpeg)
+![AAIDC-wk7-l5-deepeval-tutorial-v3.jpeg](AAIDC-wk7-l5-deepeval-tutorial-v3.jpeg)
 
 --DIVIDER--
 
