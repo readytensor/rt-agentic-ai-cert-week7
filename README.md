@@ -2,7 +2,7 @@
 
 This repository contains lesson materials, code examples, and evaluation scripts for **Week 7** of the [Agentic AI Developer Certification Program](https://app.readytensor.ai/publications/HrJ0xWtLzLNt) by Ready Tensor. This week is all about **evaluating agentic systems** — how to measure performance, diagnose behavior, and build trust in AI that thinks and acts.
 
-⚠️ Note: Code examples for Lessons 4, 5, and 6 will be added soon. We’re actively finalizing the evaluation scripts and datasets to ensure clarity, reproducibility, and alignment with the lesson content. Stay tuned — updates coming shortly!
+⚠️ Note: Code examples for Lessons 4, 5, and 6 will be added soon. We’re actively finalizing the evaluation scripts and datasets to ensure clarity and alignment with the lesson content. Stay tuned — updates coming shortly!
 
 ---
 
