@@ -84,6 +84,16 @@ These metrics can return **pass/fail** or **0–1 scores**, giving you flexibili
 
 --DIVIDER--
 
+# 🎥 Evaluating LLM Apps with DeepEval
+
+In this video, we walk through how to evaluate your system using DeepEval — including how to define custom metrics, score real outputs, and connect results to the Confident AI dashboard for traceable feedback.
+
+:::youtube[Title]{#7TUcd125sjc}
+
+---
+
+--DIVIDER--
+
 ## DeepEval in Practice: A Step-by-Step Example
 
 To illustrate how DeepEval works in real-world scenarios, let’s walk through a practical example: evaluating a chatbot designed to answer questions about climate change.
