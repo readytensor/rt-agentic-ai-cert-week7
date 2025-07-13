@@ -6,9 +6,11 @@ from ragas.metrics import SemanticSimilarity, Faithfulness
 from ragas.embeddings import LangchainEmbeddingsWrapper
 from langchain_openai import OpenAIEmbeddings
 from ragas.llms import LangchainLLMWrapper
-from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from llm import get_llm
+
+# Import your custom coherence metric
+from coherence import ContentCoherenceMetric, CoherenceInput
 
 # Import utility functions
 from utils import (
@@ -121,8 +123,33 @@ async def evaluate_jaccard_similarity(generated_text, truth_text, metric_name):
     }
 
 
+async def evaluate_content_coherence(
+    context, title_generated, tldr_generated, references_generated, tags_generated
+):
+    """Evaluate content coherence using the custom ContentCoherenceMetric."""
+    # Create coherence scorer
+    evaluator_llm = LangchainLLMWrapper(llm)
+    coherence_scorer = ContentCoherenceMetric(llm=evaluator_llm)
+    if not context:
+        print("Warning: No context provided for coherence evaluation")
+        return {"content_coherence": 0.0}
+
+    # Create custom sample for coherence evaluation
+    coherence_sample = CoherenceInput(
+        context=context,
+        title_generated=str(title_generated),
+        tldr_generated=str(tldr_generated),
+        references_generated=str(references_generated),
+        tags_generated=str(tags_generated),
+    )
+
+    # Evaluate coherence using the custom metric
+    score = await coherence_scorer._single_turn_ascore(coherence_sample, callbacks=None)
+    return {"content_coherence": score}
+
+
 async def evaluate_dataset(num_publications_to_evaluate: int = 2):
-    """Evaluate the golden dataset with semantic similarity, Jaccard metrics, and faithfulness."""
+    """Evaluate the golden dataset with semantic similarity, Jaccard metrics, faithfulness, and content coherence."""
 
     # Load data using utility functions
     df = load_dataset(num_publications_to_evaluate=num_publications_to_evaluate)
@@ -234,6 +261,16 @@ async def evaluate_dataset(num_publications_to_evaluate: int = 2):
             )
             result.update(tags_faithfulness)
 
+            # Content Coherence Evaluation
+            coherence_result = await evaluate_content_coherence(
+                context,
+                title_generated,
+                tldr_generated,
+                references_generated,
+                tags_generated,
+            )
+            result.update(coherence_result)
+
             results.append(result)
 
             # Print scores using utility function
@@ -246,6 +283,7 @@ async def evaluate_dataset(num_publications_to_evaluate: int = 2):
             traceback.print_exc()
             # Still add the result with None values using utility function
             result = initialize_result_dict(row["publication_external_id"])
+            result["content_coherence"] = None
             results.append(result)
 
     # Save results and print summary using utility functions
